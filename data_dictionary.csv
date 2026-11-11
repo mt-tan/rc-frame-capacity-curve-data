@@ -1,0 +1,110 @@
+file,column,unit,description
+frames_main.csv,frame_id,-,Frame identifier; links all files
+frames_main.csv,set,-,"training (training pool, 20,432 frames) or holdout (hold-out set, 8,768 frames)"
+frames_main.csv,n_stories,-,Number of stories. Surrogate input 1 of 34
+frames_main.csv,n_bays,-,Number of bays. Surrogate input 2 of 34
+frames_main.csv,span_mean_m,m,Mean span length. Surrogate input 3 of 34
+frames_main.csv,span_max_m,m,Largest span length. Surrogate input 4 of 34
+frames_main.csv,span_min_m,m,Smallest span length. Surrogate input 5 of 34
+frames_main.csv,story_height_first_m,m,Height of the first story. Surrogate input 6 of 34
+frames_main.csv,story_height_typical_m,m,Height of the other stories. Surrogate input 7 of 34
+frames_main.csv,column_width_m,m,Side of the square column section (one section per frame). Surrogate input 8 of 34
+frames_main.csv,beam_width_m,m,Beam width (one section per frame). Surrogate input 9 of 34
+frames_main.csv,beam_depth_m,m,Beam depth. Surrogate input 10 of 34
+frames_main.csv,cover_m,m,Clear cover. Surrogate input 11 of 34
+frames_main.csv,fck_kPa,kPa,Characteristic concrete strength. Surrogate input 12 of 34
+frames_main.csv,fyk_MPa,MPa,Characteristic yield strength of the reinforcing steel. Surrogate input 13 of 34
+frames_main.csv,fsu_MPa,MPa,Tensile strength of the reinforcing steel. Surrogate input 14 of 34
+frames_main.csv,eps_sy,-,Yield strain of the reinforcing steel. Surrogate input 15 of 34
+frames_main.csv,steel_hardening_ratio,-,Strain-hardening ratio of the steel model. Surrogate input 16 of 34
+frames_main.csv,beam_dead_load_kN_m,kN/m,Dead load on the beams. Surrogate input 17 of 34
+frames_main.csv,beam_live_load_kN_m,kN/m,Live load on the beams. Surrogate input 18 of 34
+frames_main.csv,frame_width_m,m,Total width of the frame (number of bays x mean span). Surrogate input 19 of 34
+frames_main.csv,column_gravity_force_kN,kN,"Estimated gravity axial force of an interior first-story column, used to size the column. Surrogate input 20 of 34"
+frames_main.csv,axial_load_ratio,-,"Gravity axial-load ratio, column_gravity_force / (column_width^2 x fck). Surrogate input 21 of 34"
+frames_main.csv,column_long_ratio,-,Longitudinal reinforcement ratio of the columns. Surrogate input 22 of 34
+frames_main.csv,column_bar_diameter_m,m,Diameter of the column longitudinal bars. Surrogate input 23 of 34
+frames_main.csv,column_bars_per_face,-,Number of longitudinal bars on each column face. Surrogate input 24 of 34
+frames_main.csv,beam_top_ratio,-,Top longitudinal reinforcement ratio of the beams. Surrogate input 25 of 34
+frames_main.csv,beam_bottom_ratio,-,Bottom longitudinal reinforcement ratio of the beams. Surrogate input 26 of 34
+frames_main.csv,beam_bar_diameter_m,m,Diameter of the beam longitudinal bars. Surrogate input 27 of 34
+frames_main.csv,beam_top_bars,-,Number of top bars of the beams. Surrogate input 28 of 34
+frames_main.csv,beam_bottom_bars,-,Number of bottom bars of the beams. Surrogate input 29 of 34
+frames_main.csv,column_stirrup_diameter_m,m,Diameter of the column stirrups. Surrogate input 30 of 34
+frames_main.csv,column_stirrup_spacing_m,m,Spacing of the column stirrups. Surrogate input 31 of 34
+frames_main.csv,column_stirrup_legs,-,Number of stirrup legs in each direction of the column (2: perimeter hoop only; 3-4: with cross-ties). Surrogate input 32 of 34
+frames_main.csv,beam_stirrup_diameter_m,m,Diameter of the beam stirrups (two legs). Surrogate input 33 of 34
+frames_main.csv,beam_stirrup_spacing_m,m,Spacing of the beam stirrups. Surrogate input 34 of 34
+frames_main.csv,height_total_m,m,Total height of the frame; roof displacement = drift ratio x height_total_m
+frames_main.csv,mass_total_t,t,Total seismic mass; M1* = mass_participation x mass_total_t
+frames_main.csv,T1_s,s,First-mode period after the gravity analysis
+frames_main.csv,Gamma1,-,First-mode participation factor (mode normalized at the roof)
+frames_main.csv,mass_participation,-,Effective mass ratio of the first mode
+frames_main.csv,Vy_kN,kN,Yield base shear of the idealized (equal-area) curve
+frames_main.csv,drift_y,-,Yield roof drift ratio of the idealized curve
+frames_main.csv,Vmax_kN,kN,"Largest recorded base shear; it is the peak only if peak_passed = 1, otherwise a lower bound"
+frames_main.csv,peak_passed,0/1,1 if the base shear fell below 0.98 Vmax after the peak within the analysis
+frames_main.csv,drift_IO_b,-,"Roof drift ratio at which the first beam reaches the immediate-occupancy (IO) limit; if censored_IO_b = 1, the drift at which the observation ended (the event occurs later or never)"
+frames_main.csv,censored_IO_b,0/1,0: event reached; 1: not reached before the first bar rupture or the end of the analysis (right-censored)
+frames_main.csv,drift_LS_b,-,"Roof drift ratio at which the first beam reaches the life-safety (LS) limit; if censored_LS_b = 1, the drift at which the observation ended (the event occurs later or never)"
+frames_main.csv,censored_LS_b,0/1,0: event reached; 1: not reached before the first bar rupture or the end of the analysis (right-censored)
+frames_main.csv,drift_CP_b,-,"Roof drift ratio at which the first beam reaches the collapse-prevention (CP) limit; if censored_CP_b = 1, the drift at which the observation ended (the event occurs later or never)"
+frames_main.csv,censored_CP_b,0/1,0: event reached; 1: not reached before the first bar rupture or the end of the analysis (right-censored)
+frames_main.csv,drift_IO_c,-,"Roof drift ratio at which the first column reaches the IO limit; if censored_IO_c = 1, the drift at which the observation ended (the event occurs later or never)"
+frames_main.csv,censored_IO_c,0/1,0: event reached; 1: not reached before the first bar rupture or the end of the analysis (right-censored)
+frames_main.csv,drift_LS_c,-,"Roof drift ratio at which the first column reaches the LS limit; if censored_LS_c = 1, the drift at which the observation ended (the event occurs later or never)"
+frames_main.csv,censored_LS_c,0/1,0: event reached; 1: not reached before the first bar rupture or the end of the analysis (right-censored)
+frames_main.csv,drift_CP_c,-,"Roof drift ratio at which the first column reaches the CP limit; if censored_CP_c = 1, the drift at which the observation ended (the event occurs later or never)"
+frames_main.csv,censored_CP_c,0/1,0: event reached; 1: not reached before the first bar rupture or the end of the analysis (right-censored)
+frames_main.csv,drift_V_b,-,Roof drift ratio at which the first beam reaches its shear capacity (Eq. (2) of the article); censoring as for the strain events
+frames_main.csv,censored_V_b,0/1,0: event reached; 1: right-censored
+frames_main.csv,drift_V_c,-,Roof drift ratio at which the first column reaches its shear capacity (Eq. (2) of the article); censoring as for the strain events
+frames_main.csv,censored_V_c,0/1,0: event reached; 1: right-censored
+frames_main.csv,VVr_at_LS_b,-,Largest beam shear ratio V/Vr at the beam LS event; empty if not available
+frames_main.csv,drift_first_rupture,-,Roof drift ratio at the first rupture of a reinforcing bar; empty if no bar ruptured
+frames_main.csv,end_of_analysis,-,"How the observation of the frame ended: first_bar_rupture; near_bar_rupture (largest steel strain at least 0.9 of the rupture strain at the last step); numerical_before_peak, equilibrium_check, convergence_loss (numerical termination); post_peak_0.8Vmax (stop criterion)"
+frames_main.csv,dt_475_ZA,-,"TBEC 2018 target displacement divided by height_total_m, 475-year level, soil class ZA"
+frames_main.csv,dt_475_ZB,-,"TBEC 2018 target displacement divided by height_total_m, 475-year level, soil class ZB"
+frames_main.csv,dt_475_ZC,-,"TBEC 2018 target displacement divided by height_total_m, 475-year level, soil class ZC"
+frames_main.csv,dt_475_ZD,-,"TBEC 2018 target displacement divided by height_total_m, 475-year level, soil class ZD"
+frames_main.csv,dt_475_ZE,-,"TBEC 2018 target displacement divided by height_total_m, 475-year level, soil class ZE"
+frames_main.csv,dt_2475_ZA,-,"TBEC 2018 target displacement divided by height_total_m, 2475-year level, soil class ZA"
+frames_main.csv,dt_2475_ZB,-,"TBEC 2018 target displacement divided by height_total_m, 2475-year level, soil class ZB"
+frames_main.csv,dt_2475_ZC,-,"TBEC 2018 target displacement divided by height_total_m, 2475-year level, soil class ZC"
+frames_main.csv,dt_2475_ZD,-,"TBEC 2018 target displacement divided by height_total_m, 2475-year level, soil class ZD"
+frames_main.csv,dt_2475_ZE,-,"TBEC 2018 target displacement divided by height_total_m, 2475-year level, soil class ZE"
+frames_sensitivity.csv,(all columns),,"Same columns as frames_main.csv without ""set""; sensitivity population of 11,400 frames, not used for training"
+holdout_predictions.csv,frame_id,-,Frame identifier (hold-out set)
+holdout_predictions.csv,pred_T1_s,s,Surrogate prediction of the first-mode period
+holdout_predictions.csv,pred_Vy_kN,kN,Surrogate prediction of the yield base shear of the idealized curve
+holdout_predictions.csv,pred_drift_y,-,Surrogate prediction of the yield roof drift ratio of the idealized curve
+holdout_predictions.csv,pred_Vmax_kN,kN,Surrogate prediction of the peak base shear
+holdout_predictions.csv,pred_drift_IO_b,-,Surrogate prediction of the roof drift ratio at the beam IO event
+holdout_predictions.csv,pred_drift_LS_b,-,Surrogate prediction of the roof drift ratio at the beam LS event
+holdout_predictions.csv,pred_drift_CP_b,-,Surrogate prediction of the roof drift ratio at the beam CP event
+holdout_predictions.csv,pred_drift_IO_c,-,Surrogate prediction of the roof drift ratio at the column IO event
+holdout_predictions.csv,pred_drift_LS_c,-,Surrogate prediction of the roof drift ratio at the column LS event
+holdout_predictions.csv,pred_drift_CP_c,-,Surrogate prediction of the roof drift ratio at the column CP event
+holdout_predictions.csv,pred_VVr_at_LS_b,-,Surrogate prediction of the beam shear ratio V/Vr at the beam LS event
+holdout_predictions.csv,pred_Gamma1,-,Surrogate prediction of the first-mode participation factor (mode normalized at the roof)
+holdout_predictions.csv,pred_mass_participation,-,Surrogate prediction of the effective mass ratio of the first mode
+holdout_predictions.csv,dt_ref_<level>_<soil>,-,"Reference target displacement / height: from the recorded curve on the 160-point grid up to the first bar rupture, with the recorded modal quantities"
+holdout_predictions.csv,dt_pred_<level>_<soil>,-,"Derived target displacement / height: from the predicted curve, T1, Gamma1 and mass participation"
+holdout_curves_recorded.csv,V_0.0005 ... V_0.0800,kN,Recorded base shear at 160 roof drift ratios (0.0005 to 0.08); empty beyond the end of the analysis
+holdout_curves_predicted.csv,V_0.0005 ... V_0.0800,kN,"Predicted base shear at the same drift ratios; given up to the first bar rupture of the recorded analysis, the range on which the curve error is evaluated"
+training_cv_predictions.csv,fold,-,Fold (0-4) of the five-fold cross-validation
+training_cv_predictions.csv,cv_<target>,,"Out-of-fold prediction of the target (names and units as pred_<target> in holdout_predictions.csv); empty where the target is not defined for the frame (event not reached, or peak not passed for Vy, drift_y and Vmax)"
+single_option_test.csv,frame_id,-,One of the ten re-analyzed hold-out frames
+single_option_test.csv,n_stories,-,Number of stories
+single_option_test.csv,option_member,-,Member whose stirrups were changed (beam or column); the option is phi8 at option_spacing_cm
+single_option_test.csv,option_spacing_cm,cm,"Stirrup spacing of the option (7, 13 or 20)"
+single_option_test.csv,quantity,-,Compared quantity (names as in frames_main.csv)
+single_option_test.csv,censored,0/1,1 if the event was not reached in the original or in the option run
+single_option_test.csv,recorded_original,,Value from the analysis with the original detailing
+single_option_test.csv,recorded_option,,Value from the re-analysis with the option
+single_option_test.csv,change_recorded,-,"Relative change, recorded_option / recorded_original - 1"
+single_option_test.csv,change_predicted,-,Relative change predicted by the surrogate
+single_option_test.csv,abs_difference,-,Absolute difference between the predicted and the recorded change
+single_option_test.csv,sign_correct,0/1,1 if the predicted and the recorded change have the same sign
+column_tests.csv,(all columns),,"The 85 records selected from the PEER Structural Performance Database for the comparison of the column model (Supplementary Table S3); peer_no is the database number and specimen gives the original test source; properties as reported in the database; in_comparison is 1 for the 82 records used (three records gave no test envelope); specimen_id is shared by the N and S records of nine test assemblies, which count as one specimen each, so that the comparison has 73 specimens"
+table_S4_sensitivity_population.csv,(all columns),,Counterpart of Supplementary Table S4 for the sensitivity population: change from the 5-8 to the 17-20 cm group in percent with 95% bootstrap intervals

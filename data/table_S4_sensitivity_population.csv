@@ -1,0 +1,25 @@
+event,estimator_or_rule,n_5_8,n_17_20,P10_change_pct,P10_ci_low,P10_ci_high,median_change_pct,median_ci_low,median_ci_high
+Column LS,"Kaplan-Meier, primary rule",2849,2820,-5.0513,-6.8601,-3.4354,-8.6853,-10.4739,-7.0227
+Column LS,Aalen-Johansen (rupture as competing event),2849,2820,-5.1631,-6.8075,-3.4040,-8.9436,-10.8867,-7.1425
+Column LS,Kaplan-Meier stratified by story count,2849,2820,-5.0461,-6.7385,-3.4744,-8.6022,-10.3009,-6.9788
+Column LS,Raw rule (events after rupture counted),2849,2820,-5.2358,-6.8613,-3.5984,-8.7658,-10.3925,-7.1417
+Column LS,Flagged runs excluded,2811,2765,-5.0513,-6.7072,-3.3058,-8.6853,-10.4711,-6.9889
+Column LS,Early rupture (< 0.01H) excluded,2773,2743,-5.0461,-6.7579,-3.3076,-8.6792,-10.3802,-7.0833
+Column CP,"Kaplan-Meier, primary rule",2849,2820,-9.3338,-10.9353,-7.0122,-11.9031,-13.6087,-10.3261
+Column CP,Aalen-Johansen (rupture as competing event),2849,2820,-9.0463,-10.8104,-7.1777,-12.7239,-14.2613,-11.0430
+Column CP,Kaplan-Meier stratified by story count,2849,2820,-9.3414,-10.9405,-7.0488,-11.8381,-13.6566,-10.2895
+Column CP,Raw rule (events after rupture counted),2849,2820,-8.9420,-10.8101,-6.8576,-11.7082,-13.3840,-10.1752
+Column CP,Flagged runs excluded,2811,2765,-9.3338,-10.8532,-6.9460,-11.9031,-13.8091,-10.0821
+Column CP,Early rupture (< 0.01H) excluded,2773,2743,-9.2114,-10.8378,-7.0036,-11.9031,-13.7184,-10.2919
+Beam LS,"Kaplan-Meier, primary rule",2830,2795,-1.3128,-2.4963,-0.1307,0.1534,-0.7674,1.0890
+Beam LS,Aalen-Johansen (rupture as competing event),2830,2795,-1.3128,-2.4612,-0.1615,0.1534,-0.7010,1.1740
+Beam LS,Kaplan-Meier stratified by story count,2830,2795,-1.2654,-2.3924,-0.0889,0.1739,-0.5905,1.0527
+Beam LS,Raw rule (events after rupture counted),2830,2795,-1.3128,-2.3981,-0.1653,0.1534,-0.7403,1.2065
+Beam LS,Flagged runs excluded,2801,2737,-0.4019,-1.4633,0.5914,0.4745,-0.5784,1.4096
+Beam LS,Early rupture (< 0.01H) excluded,2763,2707,-0.4357,-1.4661,0.6876,0.4341,-0.5626,1.3623
+Beam CP,"Kaplan-Meier, primary rule",2830,2795,-1.3810,-2.6099,-0.3300,0.0440,-1.0114,1.0836
+Beam CP,Aalen-Johansen (rupture as competing event),2830,2795,-1.3810,-2.6067,-0.1673,0.0440,-1.0543,1.1004
+Beam CP,Kaplan-Meier stratified by story count,2830,2795,-1.3123,-2.4755,-0.2382,0.0386,-0.8028,1.0458
+Beam CP,Raw rule (events after rupture counted),2830,2795,-1.3810,-2.6830,-0.2468,0.0440,-1.0120,1.1294
+Beam CP,Flagged runs excluded,2801,2737,-0.4717,-1.8158,0.6668,0.2383,-0.7236,1.2213
+Beam CP,Early rupture (< 0.01H) excluded,2763,2707,-0.6293,-1.7372,0.4135,0.1908,-0.7630,1.1441
